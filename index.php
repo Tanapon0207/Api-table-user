@@ -13,6 +13,8 @@ Tanapon Rattanamano
     
 </body>
 <button id="btnjson1">json1</button>
+name<span id="fmane"></span><br/>
+sname<span id="lmane"></span>
 <script>
     console.log("ok")
     function loadjson(){
@@ -22,7 +24,7 @@ Tanapon Rattanamano
         console.log(data);
         var jData= json.parse(data);
         console.log(jData,fname);
-         console.log(jData,fname);
+         console.log(jData,lname);
         
     });
 </script>
