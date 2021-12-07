@@ -31,8 +31,12 @@ sname<span id="lmane"></span>
     $.getJSON(url)
     .done((data)=>{
         console.log(data)
-        $("#fname").text(data.fname);
-        $("#lname").text(data.lname);
+        console.log(data[2])
+        console.log(data[0].fname)
+        console.log(data[0].lname)
+        
+       /* $("#fname").text(data.fname);
+        $("#lname").text(data.lname);*/
     })
     .fail((xhr,status,err)=>{
         console.log('error')
