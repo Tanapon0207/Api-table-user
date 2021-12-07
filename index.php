@@ -30,10 +30,10 @@ function loadJSONArray(){
                 console.log(k);
                 console.log(item);
                 var line = "<tr>";
-                     + "<td>" + (k+1) + "</td>";
-                     + "<td>" + item.fname + "</td>";
-                     +"<td>" + item.lname + "</td>";
-                     + "</tr>";
+                    line += "<td>" + (k+1) + "</td>";
+                    line += "<td>" + item.fname + "</td>";
+                    line += "<td>" + item.lname + "</td>";
+                    line += "</tr>";
                 $("#tblStudent").append(line);
             });
         })
