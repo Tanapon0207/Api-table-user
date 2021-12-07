@@ -21,7 +21,7 @@
 </body>
 <script>
  
-function loadJSON(){
+function loadJSONArray(){
     var url = "https://cj-android-demon.herokuapp.com/json2.php";
     $.getJSON(url)
         .done((data)=>{
@@ -30,14 +30,15 @@ function loadJSON(){
                 console.log(k);
                 console.log(item);
                 var line = "<tr>";
-                    line += "<td>" + (k+1) + "</td>";
-                    line += "<td>" + item.fname + "</td>";
-                    line += "<td>" + item.lname + "</td>";
-                    line += "</tr>";
+                     + "<td>" + (k+1) + "</td>";
+                     + "<td>" + item.fname + "</td>";
+                     +"<td>" + item.lname + "</td>";
+                     + "</tr>";
                 $("#tblStudent").append(line);
             });
         })
         .fail((xhr, status, err)=>{
+            console.log("error")
         });
 }
 $(()=>{
