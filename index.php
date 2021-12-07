@@ -16,16 +16,32 @@ Tanapon Rattanamano
 name<span id="fmane"></span><br/>
 sname<span id="lmane"></span>
 <script>
-    console.log("ok")
+    /*console.log("ok")
     function loadjson(){
         var URL="http://cj-android-demon.herokuapp.com"
     }
     $.get(url,(data,status)=>{
-        console.log(data);
-        var jData= json.parse(data);
-        console.log(jData,fname);
-         console.log(jData,lname);
+        //console.log
         
-    });
+    });*/
+
+    console.log("ok")
+    function loadJSONobject(){
+        var URL="http://cj-android-demon.herokuapp.com";
+    
+    $.getJSON(url)
+    .done((data)=>{
+        console.log(data)
+        $("#fname").text(data.fname);
+        $("#lname").text(data.lname);
+    })
+    .fail((xhr,status,err)=>{
+        console.log('error')
+    })
+    
+      $(()=>{
+          loadJSONobject();
+      })
+  
 </script>
 </html>
