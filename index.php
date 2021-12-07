@@ -19,7 +19,10 @@ Tanapon Rattanamano
         var URL="http://cj-android-demon.herokuapp.com"
     }
     $.get(url,(data,status)=>{
-        //console.log
+        console.log(data);
+        var jData= json.parse(data);
+        console.log(jData,fname);
+         console.log(jData,fname);
         
     });
 </script>
